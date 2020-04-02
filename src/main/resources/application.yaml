@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    stream:
+      kafka:
+        binder:
+          brokers: kafka:9092
+      bindings:
+        books-in:
+          destination: book
+          contentType: application/json
+        books-out:
+          destination: book
+          contentType: application/json
+  jpa:
+    hibernate:
+      ddl-auto: create
+
+  datasource:
+    ## PostgreSQL(docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=password -d postgres)
+    url: jdbc:postgresql://postgres:5432/postgres
+    username: postgres
+    password: password
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5

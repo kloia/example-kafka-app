@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kafka-client
+  labels:
+    name: kafka-client
+spec:
+  containers:
+  - name: kafka-client
+    image: ranchercharts/confluentinc-cp-kafka:5.3.0
+    command:
+      - sh
+      - -c
+      - "exec tail -f /dev/null"

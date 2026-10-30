@@ -1,3 +1,6 @@
+> **Archived.** This repository is no longer maintained
+> and is kept read-only. It may be removed in the future.
+
 # Example Spring Boot app with PostgreSQL DB and Kafka 
 
 ### Requirements
